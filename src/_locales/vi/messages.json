@@ -1,0 +1,22 @@
+{
+   "contextmenu_translate": {
+      "description": "Title of the context menu that appears when a right click is done",
+      "message": "Dịch: %s"
+   },
+   "popup_close": {
+      "description": "Close button text",
+      "message": "ĐÓNG"
+   },
+   "popup_download": {
+      "description": "Download button text",
+      "message": "TẢI VỀ"
+   },
+   "popup_download_selected": {
+      "description": "Download selected button text",
+      "message": "TẢI FILE ĐÃ CHỌN"
+   },
+   "popup_select_all": {
+      "description": "Select all button text",
+      "message": "CHỌN TẤT CẢ"
+   }
+}

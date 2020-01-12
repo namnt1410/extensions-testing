@@ -1,0 +1,10 @@
+export var kBtnSelectAllId = 'btn-select-all';
+export var kBtnDownloadSelectedId = 'btn-download-selected';
+export var kBtnCloseId = 'btn-close';
+export var kDownloadItemsId = 'download-items';
+export var kFileNameClassName = 'file-name';
+export var kFileSizeClassName = 'file-size';
+export var kRowItemClassName = 'row-item';
+export var kDownloadBtnClassName = 'button download-button';
+export var kDataUrlAttrName = 'data-url';
+export var kDataOutputFilenameAttrName = 'data-output-filename';

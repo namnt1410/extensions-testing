@@ -1,0 +1,22 @@
+{
+   "contextmenu_translate": {
+      "description": "Title of the context menu that appears when a right click is done",
+      "message": "Dịch: %s"
+   },
+   "popup_close": {
+      "description": "Close button text",
+      "message": "CLOSE"
+   },
+   "popup_download": {
+      "description": "Download button text",
+      "message": "DOWNLOAD"
+   },
+   "popup_download_selected": {
+      "description": "Download selected button text",
+      "message": "DOWNLOAD SELECTED FILE"
+   },
+   "popup_select_all": {
+      "description": "Select all button text",
+      "message": "SELECT ALL"
+   }
+}

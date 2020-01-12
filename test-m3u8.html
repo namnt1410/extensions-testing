@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>M3U8FileParser Browser Example</title>
+  <script src="node_modules/m3u8-file-parser/dist/m3u8-file-parser.min.js"></script> 
+  <script>
+    var reader = new M3U8FileParser();
+    var m3u8Content = `
+      #EXTM3U
+      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1031000,RESOLUTION=856x480,NAME="480p"
+      //znews-mcloud-lpl-s2-te-vnno-zn-8.zadn.vn/z9omKvf8MPI/whls/vod/480/JqfB21hlw-lBoyW8UNC/65507831ed70042e5d61.m3u8?authen=exp=1576643255~acl=/z9omKvf8MPI/*~hmac=f4edaadf7ba93f47b5d31e312dbf8131
+      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1633000,RESOLUTION=1280x720,NAME="720p"
+      //znews-mcloud-lpl-s2-te-vnno-zn-8.zadn.vn/F85XKXISoZ0/whls/vod/720/gg-kvVS21WOc9YM5Bo0/65507831ed70042e5d61.m3u8?authen=exp=1576643255~acl=/F85XKXISoZ0/*~hmac=e2b2eab64d1117f238f7569cf7b9d6ff
+      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=638000,RESOLUTION=640x360,NAME="360p"
+      //znews-mcloud-lpl-s2-te-vnno-zn-8.zadn.vn/CoXRPvZFRSI/whls/vod/360/71aOwliE2WegAYbvh2i/65507831ed70042e5d61.m3u8?authen=exp=1576643255~acl=/CoXRPvZFRSI/*~hmac=2bf41406d33050cb97b46603f7386d02
+      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2664000,RESOLUTION=1920x1080,NAME="1080p"
+      //znews-mcloud-lpl-s2-te-vnno-zn-8.zadn.vn/JZd6vBlcqog/whls/vod/1080/myR7vlG11GKb9IRMgJu/65507831ed70042e5d61.m3u8?authen=exp=1576643255~acl=/JZd6vBlcqog/*~hmac=a8a954bbe837275682c60eab1084e0db
+    `;
+ 
+    reader.read(m3u8Content);
+    console.log('result', reader.getResult());
+
+    var m3u8Content2 = `
+      #EXTM3U
+      #EXT-X-VERSION:4
+      #EXT-X-PLAYLIST-TYPE:VOD
+      #EXT-X-TARGETDURATION:6
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/zR_OftNFqAA/BoehsSWzEJaP6Hav6HfQMbZi0m92H4L52oi.ts?authen=exp=1576772855~acl=/zR_OftNFqAA/*~hmac=290a9713dc9f1a1d1fa667398506e192
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/2OilGuADKzg/DZComD4a8200000W00D3Gql_414HNrvUNWuk.ts?authen=exp=1576772855~acl=/2OilGuADKzg/*~hmac=79e78e00707361a3d14d58944ce4d4ef
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/mj8UuGpGtyE/szxVBJp9pStjxUtDxUwkhgKH_l__OMDZOomjBG.ts?authen=exp=1576772855~acl=/mj8UuGpGtyE/*~hmac=3236b6b658f863ca4c5d44cc2846ba60
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/ek282NYcN8E/gQojNqwxlx-Vdv-_dvpStDTZZ8sDO6DZOomjBG.ts?authen=exp=1576772855~acl=/ek282NYcN8E/*~hmac=e81978598ed5a1c77ab3806d003a2b06
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/iaPgkBXzaIw/OMHbbuPpTtTNLrTtLrGK51-hH4L5UNnyV2mjBG.ts?authen=exp=1576772855~acl=/iaPgkBXzaIw/*~hmac=da091e71422d8f64258c5fedd2abbf5e
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/wVY6H3VQ6UE/pSZ9EohVszlx-_lR-_YukBC7wEdfPMDZOomjBG.ts?authen=exp=1576772855~acl=/wVY6H3VQ6UE/*~hmac=af2332ddb0138d915a6e49a9bd0eeb27
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/7Q9AJI3m788/cvwVRNo9ZOsjhQsDhQxkxkLHlh-_P6DZOomjBG.ts?authen=exp=1576772855~acl=/7Q9AJI3m788/*~hmac=2c3b33327fd7f077f7b10cb901ec8987
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/ZQ8xbkrA0Kw/Utv_ZPnfRMrDJKrjJKuE3WMnNbzVTNnyV2mjBG.ts?authen=exp=1576772855~acl=/ZQ8xbkrA0Kw/*~hmac=50c27798509042d31db38b0bc3e6faaf
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/tU6I8eMMC4Y/Dp8pmT0b8I410G4X0G92Gadz4XCJQMDZOomjBG.ts?authen=exp=1576772855~acl=/tU6I8eMMC4Y/*~hmac=abc28ba6abc3c7366f76371fb5fe5653
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/BKG8GbhnxSY/XO21SsANavEpixEJix3myFjFeA6XQ6DZOomjBG.ts?authen=exp=1576772855~acl=/BKG8GbhnxSY/*~hmac=ea6ce62bfea212a942c62a21a689b038
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/ygqZAVH8j74/JKX9kwfVMrjxUtjRUtWuE3E7Q6bfSNnyV2mjBG.ts?authen=exp=1576772855~acl=/ygqZAVH8j74/*~hmac=d90fed2af53acfc47a530a1bef56cae0
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/2poQfAzy82Q/8IGbryOpDpSN5nSt5nHKL5_h10K5RMDZOomjBG.ts?authen=exp=1576772855~acl=/2poQfAzy82Q/*~hmac=ce9012e5d8f040d99e2de1d8bdf1874f
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/Nh1YxrRPa3M/__hx2HZjwUd9oSdfoSgAYe4rsjlRR6DZOomjBG.ts?authen=exp=1576772855~acl=/Nh1YxrRPa3M/*~hmac=43e94a9c20a41da214b21c14261c7fc7
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/mYZTOFs9WVk/JqfBkQXTMLbvUNbPUNewEZ65QcjhRNnyV2mjBG.ts?authen=exp=1576772855~acl=/mYZTOFs9WVk/*~hmac=5641128802b9129e050530e500fb8d87
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/50v98KRLHvE/0mO7zUGH5HKrDJKLDJPsTdt99YSdSMDZOomjBG.ts?authen=exp=1576772855~acl=/50v98KRLHvE/*~hmac=f171f6cce0d7145e024520eaafa6c68b
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/eNh-YQaFYCU/yVJr1nRZv-V7nyVdnyI4X8yxrDNLS6DZOomjBG.ts?authen=exp=1576772855~acl=/eNh-YQaFYCU/*~hmac=ea411cecadf98e6cdda097e486abb9bd
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/6ZtSPM_07HA/kBsyJb-ghgwEZewkZetDpSPodPoSQ7nyV2mjBG.ts?authen=exp=1576772855~acl=/6ZtSPM_07HA/*~hmac=7ac4762b40269efdf60d3384454130d8
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/0ddgRRtjWjA/5H0Hu_870mCZ8oC38o1WO6lVC34nTMDZOomjBG.ts?authen=exp=1576772855~acl=/0ddgRRtjWjA/*~hmac=94674d6ac51197ef2c4bba42117da1c0
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/nKMiWuBk6_U/myR7DIJHrTNrzVNLzVQsjhq9vkVdT6DZOomjBG.ts?authen=exp=1576772855~acl=/nKMiWuBk6_U/*~hmac=dd05bdd617e14e0f8b93df7b194ef917
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/25g_HAebD7U/egUcL4MmjBIKb9Iqb9VNrzneXuQ6P7nyV2mjBG.ts?authen=exp=1576772855~acl=/25g_HAebD7U/*~hmac=2734a06af436eef017af783f91872a0a
+      #EXTINF:4.75,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/D7eBHA_HfbM/7XiQwFaC20WeA2W8A2jhQs3KEpew218I4YmjBG.ts?authen=exp=1576772855~acl=/D7eBHA_HfbM/*~hmac=e8d04939a354c1d4fdbd4f2965c82ba1
+      #EXTINF:5.25,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/lDWOjP2NpR4/0mO7zUGH5HKrDJKLDJPsTdt99YSdLqnCJ2mjBG.ts?authen=exp=1576772855~acl=/lDWOjP2NpR4/*~hmac=d2f11ff328c41d9044d2d497d624d0d9
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/DAvQknOkn5s/b96GOdE6WeAYegA2eg7XuUfUiR2mO7nyV2mjBG.ts?authen=exp=1576772855~acl=/DAvQknOkn5s/*~hmac=98aed03b6673256dd5f4c74329cc4667
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/mAHSbk_e_qI/UNnzZvvhRszFJqzlJqmC30UpN5rTVMDZOomjBG.ts?authen=exp=1576772855~acl=/mAHSbk_e_qI/*~hmac=ffa5ed15d882d3215a39c110f527d1d8
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/Xg4RthruTPk/Dp8pmT0b8I410G4X0G92Gadz4XCJV6DZOomjBG.ts?authen=exp=1576772855~acl=/Xg4RthruTPk/*~hmac=17b6681b0542ff842d1b3394f57e55fd
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/yD0OESXpyj0/niF2C27KqD3myF3GyFEpixS3xEtjKtD_V2mjBG.ts?authen=exp=1576772855~acl=/yD0OESXpyj0/*~hmac=e1094f3018f75522c30b485e09fcd089
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/KhBw2N4LOhg/QsvldOnvVNrTNLrzNLuU7XMXJazFGMDZOomjBG.ts?authen=exp=1576772855~acl=/KhBw2N4LOhg/*~hmac=babadd2e69d56dcdb0769dba2d1e1121
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/FLcszcYgNLg/EJmzpzuhBoyF3myl3mnCJ4Vp71qTG6DZOomjBG.ts?authen=exp=1576772855~acl=/FLcszcYgNLg/*~hmac=576234b2efc00dd2153ae4476bc04fb5
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/UywJtD1wLhc/qDNK9ZV2niRcvkR6vkMbfQuQzVJqM7nyV2mjBG.ts?authen=exp=1576772855~acl=/UywJtD1wLhc/*~hmac=d6a062bd4845e9d3aaaec84580665eff
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/toHM4IzYOXM/dfkQQ7cCY8YegAY8gAlhw-1KkxgwHcDZOomjBG.ts?authen=exp=1576772855~acl=/toHM4IzYOXM/*~hmac=21d996f14be25ddbafa2d16976628b7f
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/0jjoRfooN8A/AoultSmvFJqT7Hqz7HvUNbNX3WyFH6DZOomjBG.ts?authen=exp=1576772855~acl=/0jjoRfooN8A/*~hmac=d5a4b6513406cfbb502282c67d762b48
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/dqDvVzMHnd0/wk_k70tu_FpStDpytD-VdvGWpyxEL7nyV2mjBG.ts?authen=exp=1576772855~acl=/dqDvVzMHnd0/*~hmac=607d41875dd504ab029960cf9e417ea1
+      #EXTINF:5.0,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/AP3xNg68W2M/X860ScEMafAoihAIih7nyVfEeQ2WIcDZOomjBG.ts?authen=exp=1576772855~acl=/AP3xNg68W2M/*~hmac=ecda3472205aa698877e0c01e74362a4
+      #EXTINF:0.375,
+      //znews-mcloud-whch-s2-te-vnno-zn-8.zadn.vn/7eSxx88fk4k/BIWfsye_EpiR6nix6nXOM53a2meACnWO604X.ts?authen=exp=1576772855~acl=/7eSxx88fk4k/*~hmac=fc56448d3d60a4af8182282fe848758e
+      #EXT-X-ENDLIST
+    `
+ 
+    var reader2 = new M3U8FileParser();
+    reader2.read(m3u8Content2);
+    console.log('result', reader2.getResult());
+
+    var segments = reader2.getResult()['segments'];
+    var buffers = [];
+
+    var fetchBlob = function(url, i) {
+      fetch(url)
+        .then(res => res.blob()) // Gets the response and returns it as a blob
+        .then(blob => {
+          var fileReader = new FileReader();
+          fileReader.onload = function(event) {
+            console.log(event);
+            console.log("done " + i);
+            buffers[i] = event.target.result;
+          };
+          fileReader.readAsArrayBuffer(blob);
+      });
+    }
+
+    for (var i in segments) {
+      console.log(segments[i]);
+      let url = "https:" + segments[i]['url'];
+      fetchBlob(url, i);
+      /*fetch(url)
+        .then(res => res.blob()) // Gets the response and returns it as a blob
+        .then(blob => {
+          var fileReader = new FileReader();
+          fileReader.onload = function(event) {
+            console.log(event);
+            console.log("done " + i);
+            buffers[i] = event.target.result;
+          };
+          fileReader.readAsArrayBuffer(blob);
+      });*/
+    }
+  </script> 
+</head>
+<body>
+  <h2>See console for result</h2>
+  <button type="button" id="btn4">Click Me!</button>
+  <script type="text/javascript">
+    document.getElementById("btn4").addEventListener('click', function() {
+      var blob = new Blob( buffers, {
+        type: 'application/octet-stream'
+      });
+      
+      var url = URL.createObjectURL( blob );
+      var link = document.createElement( 'a' );
+      link.setAttribute( 'href', url );
+      link.setAttribute( 'download', 'total.ts' );
+
+      document.body.appendChild(link);
+
+      var event = document.createEvent( 'MouseEvents' );
+      event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+      link.dispatchEvent( event );
+    });
+  </script>
+</body>
+</html>
